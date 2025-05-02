@@ -1,1 +1,57 @@
 // Заголовки, загальні БЕМ блоки та інше...
+.btn {
+    display: inline-flex;
+    padding: toRem(24) toRem(20);
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius: 100px;
+    border-top: 1px solid #60a969;
+    border-right: 1px solid #60a969;
+    border-bottom: 2px solid #60a969;
+    border-left: 1px solid #60a969;
+    background: linear-gradient(180deg, #f4f4f4 0%, #e3e3e3 100%);
+    box-shadow: 0px 4px 8px 0px rgba(39, 39, 39, 0.25);
+    max-height: toRem(48);
+    transition: all 0.3s;
+    svg {
+        max-width: toRem(20);
+        transition: fill 0.3s;
+    }
+
+    &-green {
+        border: 1px solid #fff;
+        background: linear-gradient(202deg, #60a969 2.71%, #3e7c52 85.56%);
+        box-shadow: 0px 4px 8px 0px #d9d9d9;
+
+        svg {
+            fill: #fff;
+        }
+
+        &:hover {
+            background: linear-gradient(180deg, #f4f4f4 0%, #e3e3e3 100%);
+            box-shadow: 0px 4px 8px 0px rgba(39, 39, 39, 0.25);
+            border: 1px solid #60a969;
+
+            svg {
+                fill: #60a969;
+            }
+        }
+    }
+    &-hero {
+        svg {
+            &:first-child {
+                display: block;
+                @media (max-width: $mobile) {
+                    display: none;
+                }
+            }
+            &:last-child {
+                display: none;
+                @media (max-width: $mobile) {
+                    display: block;
+                }
+            }
+        }
+    }
+}

@@ -1,3 +1,101 @@
 //====================================================================================================
+// Hero
+.hero {
+    // .hero__container
+    &__container {
+    }
+    // .hero__main
+    &__main {
+        position: relative;
+    }
+    &__img {
+        width: 100%;
+        &:nth-child(1) {
+            display: block;
+            @media (max-width: $tablet) {
+                display: none;
+            }
+        }
+        &:nth-child(2) {
+            display: none;
+            @media (max-width: $tablet) {
+                display: block;
+            }
+            @media (max-width: $mobile) {
+                display: none;
+            }
+        }
+        &:nth-child(3) {
+            display: none;
+            @media (max-width: $mobile) {
+                display: block;
+            }
+        }
+    }
+    // .hero__logo
+    &__logo {
+        position: absolute;
+        right: 0;
+        top: 0;
+        @include adaptiveValue("max-width", 284, 0);
+        @media (max-width: $tablet) {
+            display: none;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    // .hero__content
+    &__content {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        @include adaptiveValue("max-width", 800, 200);
+        @media (max-width: $tablet) {
+            max-width: 80%;
+        }
+        @media (max-width: $mobile) {
+            position: relative;
+            width: 100%;
+            max-width: 100%;
+            margin-top: toRem(12);
+        }
+        div {
+            margin-top: toRem(10);
+            display: flex;
+            align-items: flex-end;
+            gap: toRem(16);
+            margin-right: toRem(20);
+            p {
+                line-height: toRem(24);
+                @include adaptiveValue("font-size", 16, 12);
+                @media (max-width: toRem(1080)) {
+                    line-height: normal;
+                }
+            }
+        }
+    }
+    // .hero__title
+    &__title {
+        font-weight: 500;
+        background: linear-gradient(202deg, #60a969 2.71%, #3e7c52 85.56%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        line-height: normal;
+        @include adaptiveValue("font-size", 36, 16);
+        @media (max-width: $mobile) {
+            display: flex;
+            justify-content: space-between;
+            align-items: center !important;
+        }
+        h1 {
+            @media (max-width: toRem(1080)) {
+                line-height: normal;
+            }
+        }
+    }
+}
 
 //====================================================================================================

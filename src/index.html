@@ -4,7 +4,62 @@
     <body>
         <div class="wrapper">
             @@include('html/_header.htm',{})
-            <main class="page"></main>
+            <main class="page">
+                <section class="hero">
+                    <div class="hero__container">
+                        <div class="hero__main">
+                            <img src="@img/hero.png" class="hero__img" alt="Hero" />
+                            <img src="@img/hero-tab.png" class="hero__img" alt="Hero" />
+                            <img src="@img/hero-mob.png" class="hero__img" alt="Hero" />
+                            <div class="hero__logo">
+                                <img src="@img/logo.svg" alt="Defdil" />
+                            </div>
+                            <div class="hero__content">
+                                <div class="hero__title">
+                                    <h1>
+                                        Welcome to Defdil: <br />
+                                        Revolutionizing Online Payments
+                                    </h1>
+                                </div>
+                                <div>
+                                    <p>
+                                        Defdil is your partner in building smarter, more connected
+                                        payment ecosystems. At the core of our solutions is
+                                        ImpactPay — a feature-rich payment orchestration platform
+                                        designed for seamless, secure, and efficient transactions
+                                        across the globe.
+                                    </p>
+                                    <a
+                                        href="#"
+                                        data-da=".hero__title, 767, 1"
+                                        class="btn btn-green btn-hero">
+                                        <svg
+                                            width="22"
+                                            height="16"
+                                            viewBox="0 0 22 16"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M21.6302 8.70711C22.0207 8.31658 22.0207 7.68342 21.6302 7.29289L15.2662 0.928932C14.8757 0.538408 14.2426 0.538408 13.852 0.928932C13.4615 1.31946 13.4615 1.95262 13.852 2.34315L19.5089 8L13.852 13.6569C13.4615 14.0474 13.4615 14.6805 13.852 15.0711C14.2426 15.4616 14.8757 15.4616 15.2662 15.0711L21.6302 8.70711ZM0.923096 8V9H20.9231V8V7H0.923096V8Z"
+                                                fill="" />
+                                        </svg>
+                                        <svg
+                                            width="8"
+                                            height="12"
+                                            viewBox="0 0 8 12"
+                                            fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M0.646042 1.06645C0.451957 1.26191 0.452515 1.57753 0.647289 1.77231L4.52181 5.64683C4.71693 5.84194 4.7171 6.15823 4.5222 6.35355L0.647765 10.2364C0.452867 10.4318 0.453039 10.7481 0.648151 10.9432L1.35143 11.6464C1.54669 11.8417 1.86327 11.8417 2.05854 11.6464L7.35143 6.35355C7.54669 6.15829 7.54669 5.84171 7.35143 5.64645L2.05979 0.354805C1.86404 0.159055 1.54649 0.159616 1.35143 0.356056L0.646042 1.06645Z"
+                                                fill="" />
+                                        </svg>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
             @@include('html/_footer.htm',{})
         </div>
         @@include('html/_js.htm',{})
