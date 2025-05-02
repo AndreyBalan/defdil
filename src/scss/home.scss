@@ -331,6 +331,9 @@
     // .solutions__container
     &__container {
         padding: toRem(0) toRem(40);
+        @media (max-width: $mobile) {
+            padding: toRem(0) toRem(15);
+        }
         &-white {
             padding: toRem(0) toRem(40);
             display: grid;
@@ -338,9 +341,11 @@
             gap: toRem(20);
             @media (max-width: $mobile) {
                 grid-template-columns: repeat(1, 1fr);
+                padding: toRem(0) toRem(15);
             }
         }
     }
+
     // .solutions__top
     &__top {
     }
@@ -583,5 +588,237 @@
         padding: toRem(0) toRem(20);
     }
 }
+//========================================================================================================================================================
+// Stories
+.stories {
+    @include adaptiveValue("margin-top", 60, 30);
+    // @include adaptiveValue("padding-bottom", 60, 30);
+    background: #fafafa;
+    background-image: url("@img/stories.png");
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 2;
+    &::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 20%;
+        background: #fafafa;
+        z-index: -1;
+    }
+    // .solutions__container
+    &__container {
+        padding: toRem(0) toRem(40);
+        @media (max-width: $mobile) {
+            padding: toRem(0) toRem(15);
+        }
+        &-white {
+            padding: toRem(0) toRem(40);
+            display: flex;
+            justify-content: space-between;
+            @include adaptiveValue("gap", 60, 20);
+            @media (max-width: $mobile) {
+                padding: toRem(0) toRem(15);
+            }
+        }
+    }
+    // .solutions__top
+    &__top {
+    }
+    // .solutions__top-wrapper
+    &__top-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: toRem(40) toRem(0) toRem(40) toRem(0);
+        p {
+            @include adaptiveValue("margin-top", 20, 12);
+            color: rgba(0, 0, 0, 0.96);
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include adaptiveValue("font-size", 20, 14);
+        }
+        div {
+            &:first-child {
+                max-width: toRem(500);
+            }
+            &:last-child {
+                img {
+                    @include adaptiveValue("max-width", 80, 40);
+                }
+            }
+        }
+    }
+    // .solutions__title
+    &__title {
+        color: rgba(0, 0, 0, 0.96);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 112.5% */
+        @include adaptiveValue("font-size", 32, 24);
+    }
+    // .solutions__wrapper
+    &__wrapper-white {
+        background: #fff;
+        padding-top: toRem(60);
+        border-radius: toRem(40);
+        @include adaptiveValue("padding-top", 40, 20);
+        @include adaptiveValue("padding-bottom", 40, 20);
+    }
+    // .solutions__item
+    &__item {
+        border-radius: toRem(20);
+        background: #fafafa;
+        box-shadow: 0px 6px 12px 0px rgba(134, 134, 134, 0.25);
+        min-height: toRem(360);
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("padding", 20, 15);
+        @media (max-width: $tablet) {
+            min-height: toRem(420);
+        }
+        @media (max-width: $mobile) {
+            min-height: 0;
+        }
+        &-title {
+            color: #444444;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            @include adaptiveValue("font-size", 18, 14);
+        }
+        &-desc {
+            color: #5a5a5a;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include adaptiveValue("margin-top", 16, 14);
+        }
+        &-list {
+            margin-top: toRem(18);
+            display: flex;
+            flex-direction: column;
+            gap: toRem(12);
+            li {
+                color: #5a5a5a;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                position: relative;
+                @include adaptiveValue("font-size", 16, 14);
+                @include adaptiveValue("padding-left", 36, 20);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: toRem(20);
+                    height: toRem(16);
+                    background-image: url("img/check.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
 
+    &__list {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: toRem(12);
+        row-gap: toRem(20);
+        max-width: toRem(576);
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        li {
+            color: #5a5a5a;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include adaptiveValue("font-size", 16, 12);
+            @include adaptiveValue("padding-left", 34, 22);
+            position: relative;
+            &::before {
+                content: "";
+                position: absolute;
+                left: 0;
+                width: toRem(24);
+                height: toRem(24);
+                background-image: url("img/check-gr.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                @media (max-width: $mobile) {
+                    width: toRem(14);
+                    height: toRem(14);
+                }
+            }
+        }
+    }
+    &__stats {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: toRem(12);
+        row-gap: toRem(20);
+        max-width: toRem(576);
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+        &-item {
+            span {
+                font-family: Inter;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 62px; /* 129.167% */
+                background: linear-gradient(72deg, #3e7c52 11.78%, #60a969 64.83%);
+                background-clip: text;
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
+                @include adaptiveValue("font-size", 48, 32);
+                @media (max-width: $mobile) {
+                    line-height: 40px;
+                }
+            }
+            p {
+                color: #5a5a5a;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                @include adaptiveValue("font-size", 16, 12);
+            }
+            &:last-child {
+                p {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+    &__btns {
+        margin-top: auto;
+        justify-content: flex-start;
+        @media (max-width: $mobile) {
+            margin-top: toRem(40);
+        }
+    }
+    // .solutions__wrapper-heading
+    &__wrapper-heading {
+    }
+    // .solutions__wrapper-desc
+    &__wrapper-desc {
+    }
+    // .solutions__list
+
+    // .solutions__list-item
+    &__list-item {
+    }
+    // .solutions__content
+    &__content {
+    }
+}
 //========================================================================================================================================================
