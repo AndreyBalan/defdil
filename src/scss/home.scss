@@ -2,6 +2,7 @@
 // Hero
 .hero {
     // .hero__container
+    @include adaptiveValue("padding-bottom", 60, 30);
     &__container {
     }
     // .hero__main
@@ -96,6 +97,151 @@
             }
         }
     }
+}
+//========================================================================================================================================================
+// Why us
+.why {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+    // .why__container
+    &__container {
+        background-image: url("@img/why.png");
+        // background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: toRem(480);
+        padding: toRem(30) toRem(40);
+        @media (max-width: $tablet) {
+            background-image: url("@img/why-tab.png");
+            background-size: cover;
+            background-position: top;
+        }
+        @media (max-width: $mobile) {
+            background-image: url("@img/why-mob.png");
+            padding: toRem(30) toRem(15);
+            background-size: cover;
+        }
+    }
+    // .why__heading
+    &__heading {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: $mobile) {
+            justify-content: center;
+        }
+    }
+    // .why__title
+    &__title {
+        color: #fff;
+        font-family: "Helvetica Neue";
+        font-weight: 500;
+        line-height: toRem(36); /* 112.5% */
+        @include adaptiveValue("font-size", 32, 24);
+        @media (max-width: $mobile) {
+            line-height: normal;
+        }
+    }
+    // .why__btns
+    &__btns {
+        display: flex;
+        gap: toRem(12);
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        transition: ease 0.3s;
+        @include adaptiveValue("font-size", 20, 16);
+        @media (max-width: $mobile) {
+            margin-top: toRem(20);
+            justify-content: center;
+        }
+    }
+    // .why__wrapper
+    &__wrapper {
+        @include adaptiveValue("margin-top", 60, 20);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(6, 1fr);
+        }
+        @media (max-width: $mobile) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    // .why__item
+    &__item {
+        padding: toRem(20) toRem(0) toRem(40) toRem(0);
+        border-radius: 20px;
+        border-top: 1px dashed #fff;
+        border-bottom: 1px dashed #fff;
+        border-left: 1px dashed #fff;
+        background: linear-gradient(222deg, #fff 29.19%, #f2f2f2 70.3%, #e3e3e3 97.6%);
+        box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.25);
+        @media (max-width: $tablet) {
+            min-height: toRem(320);
+        }
+        @media (max-width: $mobile) {
+            min-height: 0;
+        }
+        @media (max-width: $tablet) {
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                grid-column: span 2;
+            }
+            &:nth-child(4),
+            &:nth-child(5) {
+                grid-column: span 3;
+            }
+        }
+    }
+    // .why__item-top
+    &__item-top {
+        display: flex;
+        align-items: center;
+        @include adaptiveValue("gap", 20, 12);
+    }
+    // .why__item-icon
+    &__item-icon {
+    }
+    // .why__item-num
+    &__item-num {
+        color: rgba(134, 134, 134, 0.25);
+        font-family: "Inter";
+        font-size: 84px;
+        font-style: normal;
+        font-weight: 200;
+        line-height: 62px; /* 73.81% */
+        @include adaptiveValue("font-size", 84, 64);
+    }
+    // .why__item-heading
+    &__item-heading {
+        color: #000;
+        font-family: "Helvetica Neue";
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiveValue("font-size", 16, 14);
+        margin-top: toRem(20);
+        padding: toRem(0) toRem(20);
+    }
+    // .why__item-desc
+    &__item-desc {
+        color: #5a5a5a;
+        font-family: "Helvetica Neue";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: toRem(8);
+        padding: toRem(0) toRem(20);
+        @include adaptiveValue("font-size", 16, 12);
+    }
+}
+.btn {
+}
+.btn-green {
 }
 
 //====================================================================================================
