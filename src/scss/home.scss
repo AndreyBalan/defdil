@@ -134,7 +134,7 @@
     // .why__title
     &__title {
         color: #fff;
-        font-family: "Helvetica Neue";
+
         font-weight: 500;
         line-height: toRem(36); /* 112.5% */
         @include adaptiveValue("font-size", 32, 24);
@@ -146,7 +146,7 @@
     &__btns {
         display: flex;
         gap: toRem(12);
-        font-family: "Helvetica Neue";
+
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -218,7 +218,7 @@
     // .why__item-heading
     &__item-heading {
         color: #000;
-        font-family: "Helvetica Neue";
+
         font-style: normal;
         font-weight: 500;
         line-height: normal;
@@ -229,7 +229,7 @@
     // .why__item-desc
     &__item-desc {
         color: #5a5a5a;
-        font-family: "Helvetica Neue";
+
         font-size: 16px;
         font-style: normal;
         font-weight: 400;
@@ -245,3 +245,63 @@
 }
 
 //====================================================================================================
+// Overview
+.overview {
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+    // .overview__container
+    &__container {
+    }
+    // .overview__wrapper
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        @include adaptiveValue("gap", 40, 12);
+    }
+    // .overview__content
+    &__content {
+        @include adaptiveValue("max-width", 640, 60);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+        }
+        p {
+            color: #5a5a5a;
+            //
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include adaptiveValue("margin-top", 16, 12);
+        }
+    }
+    // .overview__title
+    &__title {
+        color: rgba(0, 0, 0, 0.96);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 112.5% */
+        @include adaptiveValue("margin-bottom", 24, 12);
+        @include adaptiveValue("font-size", 32, 24);
+        @media (max-width: $mobile) {
+            text-align: center;
+        }
+    }
+    // .overview__img
+    &__img {
+        @include adaptiveValue("max-width", 640, 60);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            width: 100%;
+            img {
+                max-width: 100%;
+                width: 100%;
+            }
+        }
+        img {
+            max-width: 100%;
+        }
+    }
+}
+
+//========================================================================================================================================================
