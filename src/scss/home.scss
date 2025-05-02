@@ -193,6 +193,10 @@
             &:nth-child(4),
             &:nth-child(5) {
                 grid-column: span 3;
+                margin-top: toRem(20);
+                @media (max-width: $mobile) {
+                    margin-top: toRem(0);
+                }
             }
         }
     }
@@ -301,6 +305,148 @@
         img {
             max-width: 100%;
         }
+    }
+}
+//========================================================================================================================================================
+// Solutions
+.solutions {
+    @include adaptiveValue("margin-top", 60, 30);
+    // @include adaptiveValue("padding-bottom", 60, 30);
+    background: #fafafa;
+    background-image: url("@img/solutions.png");
+    background-size: contain;
+    background-position: top;
+    background-repeat: no-repeat;
+
+    // .solutions__container
+    &__container {
+        padding: toRem(0) toRem(40);
+        &-white {
+            padding: toRem(0) toRem(40);
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: toRem(20);
+            @media (max-width: $mobile) {
+                grid-template-columns: repeat(1, 1fr);
+            }
+        }
+    }
+    // .solutions__top
+    &__top {
+    }
+    // .solutions__top-wrapper
+    &__top-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        padding: toRem(40) toRem(0) toRem(40) toRem(0);
+        p {
+            @include adaptiveValue("margin-top", 20, 12);
+            color: #fff;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include adaptiveValue("font-size", 20, 14);
+        }
+        div {
+            &:first-child {
+                max-width: toRem(500);
+            }
+        }
+    }
+    // .solutions__title
+    &__title {
+        color: #fff;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 112.5% */
+        @include adaptiveValue("font-size", 32, 24);
+    }
+    // .solutions__wrapper
+    &__wrapper-white {
+        background: #fff;
+        padding-top: toRem(60);
+        border-radius: toRem(40);
+        @include adaptiveValue("padding-top", 60, 20);
+        @include adaptiveValue("padding-bottom", 60, 20);
+    }
+    // .solutions__item
+    &__item {
+        border-radius: toRem(20);
+        background: #fafafa;
+        box-shadow: 0px 6px 12px 0px rgba(134, 134, 134, 0.25);
+        min-height: toRem(360);
+        display: flex;
+        flex-direction: column;
+        @include adaptiveValue("padding", 20, 15);
+        @media (max-width: $tablet) {
+            min-height: toRem(420);
+        }
+        @media (max-width: $mobile) {
+            min-height: 0;
+        }
+        &-title {
+            color: #444444;
+            font-style: normal;
+            font-weight: 700;
+            line-height: normal;
+            @include adaptiveValue("font-size", 18, 14);
+        }
+        &-desc {
+            color: #5a5a5a;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            @include adaptiveValue("margin-top", 16, 14);
+        }
+        &-list {
+            margin-top: toRem(18);
+            display: flex;
+            flex-direction: column;
+            gap: toRem(12);
+            li {
+                color: #5a5a5a;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                position: relative;
+                @include adaptiveValue("font-size", 16, 14);
+                @include adaptiveValue("padding-left", 36, 20);
+                &::before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    width: toRem(20);
+                    height: toRem(16);
+                    background-image: url("img/check.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                }
+            }
+        }
+    }
+    &__btns {
+        margin-top: auto;
+        justify-content: flex-start;
+        @media (max-width: $mobile) {
+            margin-top: toRem(40);
+        }
+    }
+    // .solutions__wrapper-heading
+    &__wrapper-heading {
+    }
+    // .solutions__wrapper-desc
+    &__wrapper-desc {
+    }
+    // .solutions__list
+
+    // .solutions__list-item
+    &__list-item {
+    }
+    // .solutions__content
+    &__content {
     }
 }
 
