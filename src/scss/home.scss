@@ -500,7 +500,8 @@
                 @include adaptiveValue("width", 250, 120);
             }
             @media (max-width: $mobile) {
-                width: 100%;
+                max-width: 100% !important;
+                width: 100% !important;
             }
         }
         &-desc {
