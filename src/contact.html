@@ -1,9 +1,39 @@
 <!doctype html>
 <html lang="en">
-    @@include('html/_head.htm',{ "title":"Defdil | Main Page" })
+    @@include('html/_head.htm',{ "title":"Defdil | Contact Us" })
     <body>
         <div class="wrapper">
-            @@include('html/_header.htm',{})
+            @@include('html/_popup.htm',{})
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__menu menu">
+                        <img src="@img/logo.svg" class="header__logo" alt="Defdil" />
+                        <nav class="menu__body">
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Home</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Why Defdil?</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Solutions</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Product</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="index.html" class="menu__link">Case Studies</a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="contact.html" class="menu__link active">Contact</a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <button type="button" class="menu__icon icon-menu"><span></span></button>
+                    </div>
+                </div>
+            </header>
             <main class="page">
                 <section class="contact">
                     <div class="contact__container">
@@ -34,22 +64,19 @@
                                     type="text"
                                     id="name"
                                     name="name"
-                                    data-error="Incorrect name"
-                                    data-required
+                                    required
                                     placeholder="Name " />
                                 <input
                                     type="text"
                                     id="surname"
                                     name="surname"
-                                    data-error="Incorrect Surname"
-                                    data-required
+                                    required
                                     placeholder="Surname " />
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
-                                    data-required="email"
-                                    data-error="Incorrect email"
+                                    required
                                     placeholder="E-mail " />
                                 <input
                                     type="text"

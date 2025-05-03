@@ -1089,3 +1089,63 @@
 }
 
 //========================================================================================================================================================
+// Legal
+.legal {
+    padding: toRem(16) toRem(0) toRem(60) toRem(0);
+    // .legal__container
+    &__container {
+    }
+    // .legal__title
+    &__title {
+        color: rgba(0, 0, 0, 0.96);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 112.5% */
+        @include adaptiveValue("font-size", 32, 24);
+    }
+    // .legal__wrapper
+    &__wrapper {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptiveValue("gap", 40, 16);
+        @media (max-width: $tablet) {
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+    // .legal__privacy
+    &__privacy {
+    }
+    // .legal__heading
+    &__heading {
+        color: #444444;
+        font-size: toRem(18);
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        margin-top: toRem(20);
+        margin-bottom: toRem(16);
+    }
+    // .legal__desc
+    &__desc {
+        color: #5a5a5a;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        margin-top: toRem(4);
+        @include adaptiveValue("font-size", 14, 12);
+    }
+    // .legal__subheading
+    &__subheading {
+        color: #444;
+        margin-top: toRem(12);
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiveValue("font-size", 16, 14);
+    }
+    // .legal__terms
+    &__terms {
+    }
+}
+
+//========================================================================================================================================================
