@@ -34,7 +34,7 @@
         display: flex;
         align-items: center;
         gap: toRem(62);
-        @media (max-width: $mobile) {
+        @media (max-width: $tablet) {
             flex-direction: column;
             gap: toRem(20);
         }
