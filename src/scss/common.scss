@@ -66,13 +66,13 @@
 
     &-hero {
         svg {
-            &:first-child {
+            &:nth-child(2) {
                 display: block;
                 @media (max-width: $mobile) {
                     display: none;
                 }
             }
-            &:last-child {
+            &:nth-child(3) {
                 display: none;
                 @media (max-width: $mobile) {
                     display: block;
