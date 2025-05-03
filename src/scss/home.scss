@@ -330,18 +330,12 @@
     }
     // .solutions__container
     &__container {
-        padding: toRem(0) toRem(40);
-        @media (max-width: $mobile) {
-            padding: toRem(0) toRem(15);
-        }
         &-white {
-            padding: toRem(0) toRem(40);
             display: grid;
             grid-template-columns: repeat(2, 1fr);
             gap: toRem(20);
             @media (max-width: $mobile) {
                 grid-template-columns: repeat(1, 1fr);
-                padding: toRem(0) toRem(15);
             }
         }
     }
@@ -611,17 +605,15 @@
     }
     // .solutions__container
     &__container {
-        padding: toRem(0) toRem(40);
-        @media (max-width: $mobile) {
-            padding: toRem(0) toRem(15);
-        }
         &-white {
-            padding: toRem(0) toRem(40);
             display: flex;
             justify-content: space-between;
             @include adaptiveValue("gap", 60, 20);
+            @media (max-width: $tablet) {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
             @media (max-width: $mobile) {
-                padding: toRem(0) toRem(15);
             }
         }
     }
@@ -663,7 +655,7 @@
     }
     // .solutions__wrapper
     &__wrapper-white {
-        background: #fff;
+        background: #fafafa;
         padding-top: toRem(60);
         border-radius: toRem(40);
         @include adaptiveValue("padding-top", 40, 20);
@@ -733,6 +725,7 @@
         column-gap: toRem(12);
         row-gap: toRem(20);
         max-width: toRem(576);
+
         @media (max-width: $mobile) {
             grid-template-columns: repeat(1, 1fr);
         }
@@ -767,7 +760,7 @@
         row-gap: toRem(20);
         max-width: toRem(576);
         @media (max-width: $mobile) {
-            grid-template-columns: repeat(1, 1fr);
+            // grid-template-columns: repeat(1, 1fr);
         }
         &-item {
             span {
@@ -821,4 +814,90 @@
     &__content {
     }
 }
+//========================================================================================================================================================
+// Impactpay
+.impactpay {
+    background: #fafafa;
+    @include adaptiveValue("padding-top", 60, 30);
+    @include adaptiveValue("padding-bottom", 60, 30);
+    // .impactpay__container
+    &__container {
+    }
+    // .impactpay__wrapper
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        @include adaptiveValue("gap", 40, 20);
+        @media (max-width: $tablet) {
+            flex-wrap: wrap;
+        }
+    }
+    // .impactpay__content
+    &__content {
+        max-width: toRem(560);
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            width: 100%;
+        }
+    }
+    // .impactpay__title
+    &__title {
+        color: rgba(0, 0, 0, 0.96);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 36px; /* 112.5% */
+        @include adaptiveValue("font-size", 32, 24);
+        @media (max-width: $mobile) {
+            line-height: normal;
+        }
+    }
+    // .impactpay__desc
+    &__desc {
+        color: #000;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        @include adaptiveValue("font-size", 20, 14);
+        @include adaptiveValue("margin-top", 20, 12);
+    }
+    // .impactpay__items
+    &__items {
+        @include adaptiveValue("margin-top", 40, 20);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        @include adaptiveValue("gap", 20, 16);
+    }
+    // .impactpay__item
+    &__item {
+    }
+    // .impactpay__item-title
+    &__item-title {
+        color: #000;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include adaptiveValue("font-size", 18, 14);
+    }
+    // .impactpay__item-desc
+    &__item-desc {
+        margin-top: toRem(8);
+        color: #5a5a5a;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        @include adaptiveValue("font-size", 16, 12);
+    }
+    img {
+        max-width: 50%;
+        @media (max-width: $tablet) {
+            max-width: 100%;
+            width: 100%;
+            margin-top: toRem(40);
+        }
+        @media (max-width: $mobile) {
+            margin-top: toRem(20);
+        }
+    }
+}
+
 //========================================================================================================================================================
