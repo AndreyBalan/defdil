@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+    @@include('html/_head.htm',{ "title":"Defdil | Main Page" })
+    <body>
+        <div class="wrapper">
+            @@include('html/_header.htm',{})
+            <main class="page">
+                <section class="contact">
+                    <div class="contact__container">
+                        <div class="contact__wrapper">
+                            <div class="contact__info">
+                                <h2 class="contact__title">Feel Free to Contact Us</h2>
+                                <p class="contact__desc">
+                                    Reach out to us using the contact information provided on this
+                                    page, and we'll respond to you promptly!
+                                </p>
+                                <h3 class="contact__heading">Defdil</h3>
+                                <p class="contact__info-desc address">
+                                    9, Vasili Michailidi, 3026, Limassol, Cyprus
+                                </p>
+                                <h3 class="contact__heading">Customer Support:</h3>
+                                <p class="contact__info-desc mail">sales@defdil.ltd</p>
+                                <p class="contact__info-desc phone">+44 75 77878360</p>
+                                <img src="@img/stories-icon.png" alt="Defdil" />
+                            </div>
+                            <form
+                                class="contact__form"
+                                action="files/sendmail/sendmail.php"
+                                method="POST"
+                                data-popup-message="#form-message"
+                                data-dev>
+                                <h2 class="contact__title">Get Started with a Free Demo</h2>
+                                <input
+                                    type="text"
+                                    id="name"
+                                    name="name"
+                                    data-error="Incorrect name"
+                                    data-required
+                                    placeholder="Name " />
+                                <input
+                                    type="text"
+                                    id="surname"
+                                    name="surname"
+                                    data-error="Incorrect Surname"
+                                    data-required
+                                    placeholder="Surname " />
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    data-required="email"
+                                    data-error="Incorrect email"
+                                    placeholder="E-mail " />
+                                <input
+                                    type="text"
+                                    name="phone"
+                                    id="phone"
+                                    placeholder="Phone number " />
+
+                                <div class="contact__form-row contact__form-row-checkbox">
+                                    <input
+                                        type="checkbox"
+                                        class="custom-checkbox"
+                                        id="check"
+                                        name="check"
+                                        required
+                                        value="yes" />
+                                    <label for="check"></label>
+                                    <p>
+                                        I have read and agree with Defdil  Privacy Policy and Terms
+                                        of Use
+                                    </p>
+                                </div>
+
+                                <button class="form-btn btn btn-text" type="submit">
+                                    <span>Send Your Request</span>
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            @@include('html/_footer.htm',{})
+        </div>
+        @@include('html/_js.htm',{})
+    </body>
+</html>
