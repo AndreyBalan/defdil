@@ -24,16 +24,26 @@
 	//Від кого лист
 	$mail->setFrom('from@gmail.com', ''); // Вказати потрібний E-mail
 	//Кому відправити
-	$mail->addAddress('to@gmail.com'); // Вказати потрібний E-mail
+	$mail->addAddress('info@defdil.ltd'); // Вказати потрібний E-mail
 	//Тема листа
 	$mail->Subject = 'Вітання!';
 
 	//Тіло листа
-	$body = '<h1>Вам лист!</h1>';
+	$body = '<h1>Вам було надіслано форму з сайту Defdil.</h1>';
 
-	//if(trim(!empty($_POST['email']))){
-		//$body.=$_POST['email'];
-	//}	
+	if(trim(!empty($_POST['name']))){
+		$body.= "<p><strong>Name:</strong> ".$_POST['name']. "</p>";
+	}	
+	if(trim(!empty($_POST['surname']))){
+		$body.= "<p><strong>Surname:</strong> ".$_POST['surname']. "</p>";
+	}	
+	if(trim(!empty($_POST['email']))){
+		$body.= "<p><strong>Email:</strong> ".$_POST['email']. "</p>";
+	}	
+	if(trim(!empty($_POST['phone']))){
+		$body.= "<p><strong>Phone:</strong> ".$_POST['phone']. "</p>";
+	}	
+		
 	
 	/*
 	//Прикріпити файл
